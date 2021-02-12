@@ -25,8 +25,17 @@ public class EchoMessage extends Thread{
 
             while (true){
                 String echoString = input.readLine();
+                System.out.println("Input received:" + echoString);
+
                 if (echoString.equals("exit")){
                     break;
+                }
+
+                try {
+                    output.println("Processing data...");
+                    Thread.sleep(5000);
+                } catch (InterruptedException e){
+                    System.out.println("Thread interrupted: " + e.getMessage());
                 }
 
                 output.println(echoString);
