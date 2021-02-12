@@ -1,13 +1,9 @@
-package com.jfspps;
+package com.jfspps.tcp;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
 import java.net.ServerSocket;
-import java.net.Socket;
 
-public class Main {
+public class TCP_Main {
 
     public static void main(String[] args){
         // some sockets have already been assigned a port number, so try to build an instance and handle error if thrown
@@ -23,3 +19,6 @@ public class Main {
         }
     }
 }
+
+// TCP connections (ServerSocket) are slower but more reliable and check for dropped packets
+// UDP connections (DatagramSocket) are faster though they allow datagrams ('UDP packets') to drop (used for VOIP or video streaming)

@@ -1,4 +1,4 @@
-package com.jfspps;
+package com.jfspps.tcp;
 
 import java.io.BufferedReader;
 import java.io.IOException;
